@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.partners {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    border-radius: var(--border-radius-xl);
+    background-color: var(--color-gray-1);
+    padding: fluid(38, 24) fluid(80, 16);
+
+    &:has(.partners__title) {
+      padding-block: 24px;
+    }
+  }
+  
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      gap: 24px;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+}

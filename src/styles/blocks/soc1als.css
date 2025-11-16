@@ -1,0 +1,22 @@
+.soc1als__list {
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+.soc1als__item {
+  display: flex;
+}
+@media (any-hover: hover) {
+  .soc1als__link:hover {
+    border-radius: 2px;
+    outline: 2px solid var(--color-purple-light);
+    transition-duration: var(--transition-duration-faster);
+  }
+}
+@media (any-hover: none) {
+  .soc1als__link:active {
+    border-radius: 2px;
+    outline: 2px solid var(--color-purple-light);
+    transition-duration: var(--transition-duration-faster);
+  }
+}/*# sourceMappingURL=soc1als.css.map */

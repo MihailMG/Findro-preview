@@ -1,0 +1,101 @@
+@use '../helpers' as *;
+
+.hero {
+  padding-top: fluid(40, 24);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    
+    @include tablet {
+      align-items: center;
+      flex-direction: column;
+      row-gap: 24px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-block: 83px;
+    row-gap: 40px;
+    max-width: 588px;
+    
+    @include tablet {
+      display: contents;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(24, 16);
+
+    @include tablet {
+      align-items: center;
+    }
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    column-gap: 11px  ;
+    font-size: fluid(16, 12);
+    font-weight: 600;
+
+    &::before,
+    &::after {
+      content: '';
+      height: fluid(32, 24);
+      width: fluid(13.75, 10.31);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::before {
+      background-image: url(../../assets/icons/laurel-branch-left.svg);
+    }
+
+    &::after {
+      background-image: url(../../assets/icons/laurel-branch-right.svg);
+    }
+  }
+
+  &__title {
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__link {
+    order: 1;
+
+    @include tablet {
+      min-width: 311px;
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: fluid(486, 343);
+    height: fluid(600, 400);
+    border-radius: var(--border-radius-xl);
+    background-image: url(@/assets/images/main-page/hero/full-shot-happy-family-nature.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &-list {
+      padding: fluid(24, 16);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: fluid(8, 4);
+    }
+  }
+}

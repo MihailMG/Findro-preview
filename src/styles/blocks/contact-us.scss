@@ -1,0 +1,77 @@
+@use '../helpers' as *;
+
+.contact-us {
+  &__inner {
+    display: flex;
+    column-gap: fluid-to-laptop(228, 24);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 24px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    row-gap: 40px;
+
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    @include mobile {
+      order: 10;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    &-field {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__input {
+    border: var(--border);
+    border-radius: 8px;
+    min-height: 48px;
+
+    &#message {
+      min-height: 86px;
+    }
+  }
+
+  &__disclaimer {
+    font-size: 12px;
+
+    &-link {
+      color: var(--color-purple-light);
+    }
+  }
+
+  &__image {
+    width: fluid(486, 343);
+    height: fluid(600, 400);
+    border-radius: var(--border-radius-xl);
+  }
+}

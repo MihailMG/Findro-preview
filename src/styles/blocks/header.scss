@@ -1,0 +1,108 @@
+@use '../helpers' as *;
+
+.header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  background-color: var(--color-gray-1);
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 100px 200px;
+
+  @keyframes scrolling-header {
+      to {
+          box-shadow: 0 0 1rem 0 var(--color-gray-5);
+      }
+  }
+
+  &__inner {
+    display: flex;
+    padding-block: fluid(24, 16);
+    column-gap: 1px;
+    justify-content: space-between;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  &__overlay {
+    @include mobile {
+      position: fixed;
+      margin-top: 72px;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      row-gap: 3rem;
+      padding: 24px 16px;
+      background-color: var(--color-white);
+      transition-duration: var(--transition-duration-longer);
+
+      &:not(.is-active) {
+          @include hide;
+          translate: 100%;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    column-gap: fluid(40, 16);
+
+    @include mobile {
+      display: contents;
+    }
+
+    &-list {
+      display: flex;
+      gap: 16px;
+
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-link {
+      font-size: 16px;
+      font-weight: 400;
+
+      &.is-active {
+        color: var(--color-purple);
+        pointer-events: none;
+      }
+
+      @include mobile {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__get-findro-link {
+    line-height: 150%;
+    &-on-header {
+      &:not(.is-active) {
+        @include hide;
+      }
+    }
+
+    &-on-sidebar {
+      @include mobile {
+        min-width: 343px;
+        font-size: 18px;
+        padding-block: 10.5px;
+      }
+    }
+  }
+}

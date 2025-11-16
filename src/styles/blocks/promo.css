@@ -1,0 +1,11 @@
+.promo__inner {
+  --columns: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: clamp(1rem, 0.7579225352rem + 1.0328638498vw, 1.6875rem);
+}
+@media (width <= 1023px) {
+  .promo__inner {
+    --columns: 1;
+  }
+}/*# sourceMappingURL=promo.css.map */

@@ -1,0 +1,20 @@
+.rating-view {
+  display: flex;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+}
+.rating-view__star {
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.rating-view__star--empty {
+  background-image: url(@/assets/icons/star-empty.svg);
+}
+.rating-view__star--half-fill {
+  background-image: url(@/assets/icons/star-half-fill.svg);
+}
+.rating-view__star--fill {
+  background-image: url(@/assets/icons/star-fill.svg);
+}/*# sourceMappingURL=rating-view.css.map */

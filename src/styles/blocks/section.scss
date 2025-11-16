@@ -1,0 +1,145 @@
+@use '../helpers' as *;
+
+.section {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      
+    &--content-on-right {
+      flex-direction: row;
+    }
+
+    &--content-on-left {
+      flex-direction: row-reverse;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__demo {
+    position: relative;
+
+    @include tablet {
+      margin-bottom: 24px;
+      order: 10;
+    }
+
+    &:has(.feedback-card) {
+      @include tablet {
+        margin-bottom: 53px;
+      }
+    }
+  }
+
+  &__widget {
+    position: absolute;
+
+    &--feedback {
+      bottom: 0;
+      right: 0;
+      translate: 50px 50px;
+
+      @include tablet {
+        right: 50%;
+        translate: 50% 29px;
+      }
+    }
+
+    &--security {
+      left: 0;
+      top: 0;
+      translate: -50% 20%;
+
+      @include tablet {
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+      }
+    }
+
+    &--alert {
+      width: fluid(446, 311);
+      height: fluid(106, 74.24);
+      left: 50%;
+      top: 50%;
+      translate: -50% -138%;
+
+      @include mobile {
+        translate: -50% -100%;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: var(--border-radius-xl);
+    width: fluid(486, 343);
+    height: fluid(600, 400);
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 40px;
+    max-width: 49%;
+
+    @include tablet {
+      display: contents;
+    }
+  }
+
+  &__extra {
+    &-list {
+      display: flex;
+      column-gap: 16px;
+    }
+
+    @include tablet {
+      margin-bottom: 16px;
+      order: 7;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    @include tablet {
+      display: contents;
+    }
+  }
+
+  &__title {
+    text-wrap: pretty;
+    
+    @include tablet {
+      margin-bottom: 16px;
+      order: -1;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    & > p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    @include tablet {
+      text-align: center;
+      margin-bottom: 24px;
+      order: 8;
+    }
+  }
+
+  &__button {
+    @include tablet {
+      min-width: 311px;
+      order: 10;
+    }
+  }
+}

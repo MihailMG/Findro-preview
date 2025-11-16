@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.feedback-card {
+  border: var(--border-light);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-xl);
+  width: 322px;
+  height: 216px;
+  padding: 24px;
+
+  @include tablet {
+    width: 313px;
+    height: 237px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+  }
+
+  &__header {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__department {
+    color: var(--color-gray-5);
+  }
+
+  &__description {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,13 @@
+.privacy-policy {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.privacy-policy__list {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.privacy-policy a.privacy-policy__link {
+  text-decoration: underline;
+}/*# sourceMappingURL=privacy-policy.css.map */

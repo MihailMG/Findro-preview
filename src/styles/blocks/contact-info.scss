@@ -1,0 +1,24 @@
+@use '../helpers' as *;
+
+.contact-info {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding: fluid(19, 24) 16px;
+    row-gap: 16px;
+    border-radius: var(--border-radius-xl);
+    background-color: var(--color-gray-1);
+    align-items: center;
+  }
+
+  &__description {
+    max-width: 500px;
+    text-align: center;
+    text-wrap: pretty;
+    font-size: fluid(20, 16);
+  }
+
+  &__email {
+    color: var(--color-purple-light);
+  }
+}

@@ -1,0 +1,74 @@
+@use '../helpers' as *;
+
+.guide {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: fluid(40, 16);
+  }
+
+  &__title {
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    padding-left: fluid(83, 67);
+
+    &::before {
+      z-index: 10;
+      position: absolute;
+      counter-increment: list-item;
+      content: counter(list-item) "";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: fluid(64, 48);
+      aspect-ratio: 1/1;
+      top: 0;
+      left: 0;
+      border: 1px solid var(--color-purple-light);
+      border-radius: 100%;
+      color: var(--color-purple-light);
+      background-color: var(--color-white);
+      font-size: fluid(24, 16);
+      font-weight: 500;
+    }
+
+    &:not(:first-child)::after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: calc(40px + 50%);
+      bottom: 100%;
+      left: fluid(32, 24);
+      background-image: linear-gradient(var(--color-purple-light) 50%, rgba(255,255,255,0) 0%);
+      background-position: right;
+      background-size: 1px 10px;
+      background-repeat: repeat-y;
+    }
+  }
+
+  &__step {
+    &-title {
+      font-size: fluid(20, 16);
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    &-description {
+      font-size: fluid(14, 12);
+      font-weight: 400;
+    }
+  }
+}

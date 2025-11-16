@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: fluid(12, 10);
+
+  &__icon {
+    width: fluid(40, 33.33);
+    height: fluid(48, 40);
+  }
+
+  &__title {
+    width: fluid(74.5, 62);
+    height: fluid(20, 16.67);
+  }
+}

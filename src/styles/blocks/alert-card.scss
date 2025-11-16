@@ -1,0 +1,58 @@
+@use '../helpers' as *;
+
+.alert-card {
+  padding: fluid(20, 14);
+  border-radius: var(--border-radius-xxl);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+
+  @include mobile {
+    border-radius: 17.4px;
+  }
+
+  &__inner {
+    display: flex;
+    column-gap: fluid(24, 16.71);
+    align-items: center;
+  }
+
+  &__icon-wrapper {
+    @include square(fluid(56, 39));
+
+    display: flex;
+    align-items: center;
+    background-color: var(--color-gray-1);
+    padding: fluid(11, 7.62) fluid(14, 9.75);
+    border-radius: var(--border-radius-l);
+  }
+
+  &__main {
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(2, 1.39);
+  }
+
+  &__title {
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__description,
+  &__time {
+    font-size: fluid(14, 9.75);
+  }
+
+  &__time {
+    line-height: 120%;
+  }
+
+  &__description {
+    line-height: 140%;
+    text-wrap: stable;
+  }
+}

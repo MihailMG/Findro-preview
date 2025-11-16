@@ -1,0 +1,25 @@
+@use '../helpers' as *;
+
+.rating-view {
+  display: flex;
+  column-gap: 4px;
+
+  &__star {
+    @include square(16px);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--empty {
+      background-image: url(@/assets/icons/star-empty.svg);
+    }
+
+    &--half-fill {
+      background-image: url(@/assets/icons/star-half-fill.svg);
+    }
+
+    &--fill {
+      background-image: url(@/assets/icons/star-fill.svg);
+    }
+  }
+}

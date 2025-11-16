@@ -1,0 +1,30 @@
+@use '../helpers' as *;
+
+.advantage-card {
+  background-color: var(--color-white);
+  border-radius: 100px;
+  padding: 4px fluid(16, 10) 4px 4px;
+
+  &__description {
+    display: flex;
+    align-items: center;
+    font-size: fluid(14, 10);
+    column-gap: 8px;
+    font-weight: 500;
+    // line-height: 150%;
+    // letter-spacing: 0;
+    word-spacing: 1px;
+
+    &::before {
+      @include square(fluid(32, 24));
+
+      content: '';
+      border-radius: 100%;
+      background-color: var(--color-white-2);
+      background-image: url(../../assets/icons/Check.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+  }
+}

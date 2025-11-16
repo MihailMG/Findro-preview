@@ -1,0 +1,23 @@
+.breadcrumb {
+  padding-block: 24px;
+}
+.breadcrumb__list {
+  display: flex;
+  -moz-column-gap: 29px;
+       column-gap: 29px;
+}
+.breadcrumb__item {
+  position: relative;
+}
+.breadcrumb__item:not(:last-child)::after {
+  position: absolute;
+  content: "/";
+  right: -18px;
+}
+.breadcrumb__link {
+  font-size: 16px;
+}
+.breadcrumb__link.is-active {
+  pointer-events: none;
+  color: var(--color-gray-5);
+}/*# sourceMappingURL=breadcrumb.css.map */

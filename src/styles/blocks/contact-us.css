@@ -1,0 +1,67 @@
+.contact-us__inner {
+  display: flex;
+  -moz-column-gap: clamp(1.5rem, -29.8846153846rem + 49.0384615385vw, 14.25rem);
+       column-gap: clamp(1.5rem, -29.8846153846rem + 49.0384615385vw, 14.25rem);
+}
+@media (width <= 767px) {
+  .contact-us__inner {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+  }
+}
+.contact-us__main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  row-gap: 40px;
+}
+@media (width <= 767px) {
+  .contact-us__main {
+    display: contents;
+  }
+}
+.contact-us__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+@media (width <= 767px) {
+  .contact-us__content {
+    order: 10;
+  }
+}
+.contact-us__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.contact-us__form-field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+.contact-us__label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.contact-us__input {
+  border: var(--border);
+  border-radius: 8px;
+  min-height: 48px;
+}
+.contact-us__input#message {
+  min-height: 86px;
+}
+.contact-us__disclaimer {
+  font-size: 12px;
+}
+.contact-us__disclaimer-link {
+  color: var(--color-purple-light);
+}
+.contact-us__image {
+  width: clamp(21.4375rem, 18.2904929577rem + 13.4272300469vw, 30.375rem);
+  height: clamp(25rem, 20.5985915493rem + 18.779342723vw, 37.5rem);
+  border-radius: var(--border-radius-xl);
+}/*# sourceMappingURL=contact-us.css.map */

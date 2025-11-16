@@ -1,0 +1,27 @@
+@use '../helpers' as *;
+
+.button {
+  padding: 10.5px 32px;
+  justify-content: center;
+  border: none;
+  border-radius: 100px;
+  color: var(--color-white);
+  background-color: var(--color-purple-light);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+
+  @include hover {
+    color: var(--color-white);
+    background-color: var(--color-purple);
+  }
+
+  &--small {
+    font-size: 16px;
+    padding: 8px 24px;
+  }
+
+  &--big {
+    padding: 14.5px 40px;
+  }
+}

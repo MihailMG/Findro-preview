@@ -1,0 +1,29 @@
+@use '../helpers' as *;
+
+.breadcrumb {
+  padding-block: 24px;
+
+  &__list {
+    display: flex;
+    column-gap: 29px;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child)::after {
+      position: absolute;
+      content: '/';
+      right: -18px;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+
+    &.is-active {
+      pointer-events: none;
+      color: var(--color-gray-5);
+    }
+  }
+}

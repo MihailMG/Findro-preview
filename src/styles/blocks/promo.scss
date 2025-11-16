@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.promo {
+  &__inner {
+    --columns: 2;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: fluid(27, 16);
+
+    @include tablet {
+      --columns: 1;
+    }
+  }
+}

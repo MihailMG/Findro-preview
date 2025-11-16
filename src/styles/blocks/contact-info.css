@@ -1,0 +1,18 @@
+.contact-info__inner {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.5rem, 1.6100352113rem + -0.4694835681vw, 1.1875rem) 16px;
+  row-gap: 16px;
+  border-radius: var(--border-radius-xl);
+  background-color: var(--color-gray-1);
+  align-items: center;
+}
+.contact-info__description {
+  max-width: 500px;
+  text-align: center;
+  text-wrap: pretty;
+  font-size: clamp(1rem, 0.911971831rem + 0.3755868545vw, 1.25rem);
+}
+.contact-info__email {
+  color: var(--color-purple-light);
+}/*# sourceMappingURL=contact-info.css.map */
