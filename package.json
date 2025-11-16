@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
@@ -19,5 +18,5 @@
   "dependencies": {
     "sass": "^1.93.2"
   },
-  "homepage": "https://MihailMG.github.io/Findro-preview"
+  "homepage": "https://mihailmg.github.io/Findro-preview"
 }

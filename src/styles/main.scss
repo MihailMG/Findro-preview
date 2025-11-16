@@ -1,10 +1,5 @@
-@use 'normalize';
-@use 'fonts';
-@use 'variables';
-@use 'utils';
-@use 'globals';
-
 @use './blocks/button.scss';
+
 @use './blocks/header.scss';
 @use './blocks/logo.scss';
 @use './blocks/burger-button.scss';
